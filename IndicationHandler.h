@@ -6,7 +6,7 @@
 
 #include "Handler.h"
 
-namespace segnetics
+namespace indicationEmulator
 {
 
 class IndicationController;
@@ -26,6 +26,6 @@ private:
 
 std::shared_ptr<Handler> createHandler(const std::shared_ptr<IndicationController>& controller);
 
-} // segnetics
+} // indicationEmulator
 
 #endif // INDICATIONHANDLER_H

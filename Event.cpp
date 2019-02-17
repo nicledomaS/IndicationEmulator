@@ -1,6 +1,6 @@
 #include "Event.h"
 
-namespace segnetics
+namespace indicationEmulator
 {
 
 Event::Event(EventType type, bool state)
@@ -20,4 +20,4 @@ bool Event::state() const
     return m_state;
 }
 
-} // segnetics
+} // indicationEmulator

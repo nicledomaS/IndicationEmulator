@@ -1,11 +1,12 @@
 #ifndef EVENT_H
 #define EVENT_H
 
-namespace segnetics
+namespace indicationEmulator
 {
 
 enum class EventType : int
 {
+    Unknown,
     MainPower,
     UsbPower,
     UsbDataExchange,
@@ -26,6 +27,6 @@ private:
     bool m_state;
 };
 
-} // segnetics
+} // indicationEmulator
 
 #endif // EVENT_H

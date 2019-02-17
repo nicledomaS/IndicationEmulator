@@ -3,7 +3,7 @@
 #include "Event.h"
 #include "IndicationController.h"
 
-namespace segnetics
+namespace indicationEmulator
 {
 
 std::shared_ptr<Handler> createHandler(const std::shared_ptr<IndicationController>& controller)
@@ -53,4 +53,4 @@ void IndicationHandler::handle(std::shared_ptr<Event> event)
     }
 }
 
-} // segnetics
+} // indicationEmulator

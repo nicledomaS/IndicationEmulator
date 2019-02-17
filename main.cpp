@@ -15,8 +15,8 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     auto diod = std::make_shared<Diod>();
-    auto controller = std::make_shared<segnetics::IndicationController>(diod);
-    auto handler = segnetics::createHandler(controller);
+    auto controller = std::make_shared<indicationEmulator::IndicationController>(diod);
+    auto handler = indicationEmulator::createHandler(controller);
 
     QQmlApplicationEngine engine;
 

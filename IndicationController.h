@@ -2,11 +2,34 @@
 #define INDICATIONCONTROLLER_H
 
 #include <memory>
+#include <map>
+
+#include <QColor>
 
 class Diod;
 
-namespace segnetics
+namespace indicationEmulator
 {
+
+enum class EventType;
+
+struct States
+{
+    bool mainPower;
+    bool usbPower;
+    bool usbDataExchange;
+    bool activeError;
+    bool unacknowledgeError;
+};
+
+struct Property
+{
+    QColor color;
+    int enableTime;
+    int disableTimme;
+};
+
+bool operator<(const States& lhs, const States& rhs);
 
 class IndicationController
 {
@@ -22,15 +45,11 @@ public:
     void update();
 
 private:
-    std::shared_ptr<Diod> m_diod;
-    bool m_mainPower;
-    bool m_usbPower;
-    bool m_usbDataExchange;
-    bool m_activeError;
-    bool m_unacknowledgeError;
-    bool m_enabled;
+    std::map<EventType, Property> m_properties;
+    std::shared_ptr<Diod> m_diod;    
+    States m_states;
 };
 
-} // segnetics
+} // indicationEmulator
 
 #endif // INDICATIONCONTROLLER_H

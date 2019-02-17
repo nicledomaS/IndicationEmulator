@@ -3,7 +3,7 @@
 
 #include <memory>
 
-namespace segnetics
+namespace indicationEmulator
 {
 
 class Event;
@@ -16,6 +16,6 @@ public:
     virtual void handle(std::shared_ptr<Event> event) = 0;
 };
 
-} // segnetics
+} // indicationEmulator
 
 #endif // HANDLER_H

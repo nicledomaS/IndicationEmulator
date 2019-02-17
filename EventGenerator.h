@@ -5,19 +5,19 @@
 
 #include <QObject>
 
-namespace segnetics
+namespace indicationEmulator
 {
 
 class Handler;
 
-}
+} // indicationEmulator
 
 class EventGenerator : public QObject
 {
     Q_OBJECT
 
 public:
-    explicit EventGenerator(std::shared_ptr<segnetics::Handler> handler, QObject *parent = nullptr);
+    explicit EventGenerator(std::shared_ptr<indicationEmulator::Handler> handler, QObject *parent = nullptr);
 
 public slots:
     void eventMainPower(bool value);
@@ -28,7 +28,7 @@ public slots:
 
 private:
     bool m_mainPower;
-    std::shared_ptr<segnetics::Handler> m_handler;
+    std::shared_ptr<indicationEmulator::Handler> m_handler;
 };
 
 #endif // EVENTGENERATOR_H
