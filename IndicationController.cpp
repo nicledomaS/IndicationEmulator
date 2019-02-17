@@ -45,17 +45,17 @@ void IndicationController::update()
     if(m_activeError)
     {
         m_diod->setColor(QColor(Qt::red));
-        m_diod->startBlink(100, 1000);
+        m_diod->startBlink(10, 100);
     }
     else if(m_unacknowledgeError)
     {
         m_diod->setColor(QColor(Qt::red));
-        m_diod->startBlink(100, 2000);
+        m_diod->startBlink(10, 1000);
     }
     else if(m_usbDataExchange)
     {
         m_diod->setColor(QColor(Qt::green));
-        m_diod->startBlink(100, 1000);
+        m_diod->startBlink(10, 100);
     }
     else if(m_mainPower)
     {
