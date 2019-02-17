@@ -39,4 +39,4 @@
 **Event** - хранит в себе тип события
 
 ## Архитектура программы
-![alt text](https://github.com/nicledomaS/IndicationEmulator/blob/master/IndicationController.bmp)
+![alt text](https://github.com/nicledomaS/IndicationEmulator/blob/master/IndicationController.png)
